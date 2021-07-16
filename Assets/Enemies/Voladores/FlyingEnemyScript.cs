@@ -52,6 +52,7 @@ public class FlyingEnemyScript : MonoBehaviour
         else if (Vector2.Distance(transform.position, playerPos.position) < attackDistance && Time.time > counter)
         {
             enemyAnimator.SetBool("Run", false);
+            Debug.Log("Enemigo ataca");
             enemyAnimator.SetTrigger("Attacking");
             counter = Time.time + rate;
         }else
